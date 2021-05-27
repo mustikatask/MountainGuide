@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/home_background"
+    tools:context=".User.Categories.AllCategories">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize">
+
+            <ImageView
+                android:id="@+id/back_pressed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:padding="15dp"
+                android:src="@drawable/general_back_icon" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:padding="15dp"
+                android:src="@drawable/general_search_icon" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/brandon_grotesque_black"
+            android:padding="10dp"
+            android:text="Hiking Guide List"
+            android:textAllCaps="true"
+            android:textColor="@color/lightWhite"
+            android:textSize="25sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="90dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_margin="10dp"
+                android:background="@color/lightWhite">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/brandon_grotesque_black"
+                    android:padding="10dp"
+                    android:text="Hiking Guidance"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+                <Button
+                    android:id="@+id/showguide"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:background="#00000000"
+                    android:padding="15dp"
+                    android:text="Show list"
+                    android:textAllCaps="false" />
+
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="150dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="-30dp"
+                android:src="@drawable/hikers" />
+        </RelativeLayout>
+
+        <!--        <androidx.cardview.widget.CardView-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            app:cardBackgroundColor="#00000000"-->
+        <!--            android:layout_marginTop="10dp"-->
+        <!--            app:cardElevation="8dp">-->
+        <!--            <RelativeLayout-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="65dp"-->
+        <!--                android:background="#52734d">-->
+        <!--                <ImageView-->
+        <!--                    android:layout_width="100dp"-->
+        <!--                    android:layout_height="match_parent"-->
+        <!--                    android:src="@drawable/merapi"/>-->
+        <!--                <TextView-->
+        <!--                    android:layout_width="wrap_content"-->
+        <!--                    android:layout_height="wrap_content"-->
+        <!--                    android:text="Merapi"-->
+        <!--                    android:textSize="15sp"-->
+        <!--                    android:fontFamily="@font/brandon_grotesque_black"-->
+        <!--                    android:textColor="@color/white"-->
+        <!--                    android:layout_alignParentRight="true"-->
+        <!--                    android:padding="15dp"/>-->
+        <!--            </RelativeLayout>-->
+        <!--        </androidx.cardview.widget.CardView>-->
+
+
+        <!--        <androidx.cardview.widget.CardView-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            app:cardBackgroundColor="#00000000"-->
+        <!--            android:layout_marginTop="10dp"-->
+        <!--            app:cardElevation="8dp">-->
+        <!--            <RelativeLayout-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="65dp"-->
+        <!--                android:background="#52734d">-->
+        <!--                <ImageView-->
+        <!--                    android:layout_width="100dp"-->
+        <!--                    android:layout_height="match_parent"-->
+        <!--                    android:src="@drawable/semeru"/>-->
+        <!--                <TextView-->
+        <!--                    android:layout_width="wrap_content"-->
+        <!--                    android:layout_height="wrap_content"-->
+        <!--                    android:layout_alignParentRight="true"-->
+        <!--                    android:layout_marginRight="1dp"-->
+        <!--                    android:fontFamily="@font/brandon_grotesque_black"-->
+        <!--                    android:padding="15dp"-->
+        <!--                    android:text="Semeru"-->
+        <!--                    android:textColor="@color/white"-->
+        <!--                    android:textSize="15sp" />-->
+        <!--            </RelativeLayout>-->
+        <!--        </androidx.cardview.widget.CardView>-->
+
+        <!--        <androidx.cardview.widget.CardView-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            app:cardBackgroundColor="#00000000"-->
+        <!--            android:layout_marginTop="10dp"-->
+        <!--            app:cardElevation="8dp">-->
+        <!--            <RelativeLayout-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="65dp"-->
+        <!--                android:background="#52734d">-->
+        <!--                <ImageView-->
+        <!--                    android:layout_width="100dp"-->
+        <!--                    android:layout_height="70dp"-->
+        <!--                    android:src="@drawable/rinjani"/>-->
+        <!--                <TextView-->
+        <!--                    android:layout_width="wrap_content"-->
+        <!--                    android:layout_height="wrap_content"-->
+        <!--                    android:layout_alignParentRight="true"-->
+        <!--                    android:layout_marginRight="1dp"-->
+        <!--                    android:fontFamily="@font/brandon_grotesque_black"-->
+        <!--                    android:padding="15dp"-->
+        <!--                    android:text="Rinjani"-->
+        <!--                    android:textColor="@color/white"-->
+        <!--                    android:textSize="15sp" />-->
+        <!--            </RelativeLayout>-->
+        <!--        </androidx.cardview.widget.CardView>-->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="90dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_margin="10dp"
+                android:background="@color/lightWhite">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/brandon_grotesque_black"
+                    android:padding="10dp"
+                    android:text="Hiking Equipment"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+                <Button
+                    android:id="@+id/btn_showequip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:background="#00000000"
+                    android:padding="15dp"
+                    android:text="Show List"
+                    android:textAllCaps="false" />
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="150dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="-40dp"
+                android:src="@drawable/carier" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="90dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_margin="10dp"
+                android:background="@color/lightWhite">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/brandon_grotesque_black"
+                    android:padding="10dp"
+                    android:text="First Aid"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+                <Button
+                    android:id="@+id/showfaid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:background="#00000000"
+                    android:padding="15dp"
+                    android:text="Show List"
+                    android:textAllCaps="false" />
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="150dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="-40dp"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/p3k" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="90dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_margin="10dp"
+                android:background="@color/lightWhite">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/brandon_grotesque_black"
+                    android:padding="10dp"
+                    android:text="Tips n Trick"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+                <Button
+                    android:id="@+id/showtips"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:background="#00000000"
+                    android:padding="15dp"
+                    android:text="Show List"
+                    android:textAllCaps="false" />
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="150dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="-50dp"
+                android:src="@drawable/tips" />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</ScrollView>

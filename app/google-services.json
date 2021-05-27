@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "571751494450",
+    "firebase_url": "https://mountainguide-313310-default-rtdb.firebaseio.com",
+    "project_id": "mountainguide-313310",
+    "storage_bucket": "mountainguide-313310.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:571751494450:android:8675c5561c6dcdf1f61d2b",
+        "android_client_info": {
+          "package_name": "com.example.mountainguide"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "571751494450-ia0k8pt0v9goppsnm16on6h3a762aro5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.mountainguide",
+            "certificate_hash": "a4b570ad5adc6d17361b9e7a9ac800dc55fd66ef"
+          }
+        },
+        {
+          "client_id": "571751494450-uudl2gci6um46b051vg6gv02apl666t0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCKQGOsrW_AbFea77ZSGGaBh2sotYYH21s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "571751494450-uudl2gci6um46b051vg6gv02apl666t0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

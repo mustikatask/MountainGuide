@@ -1,0 +1,91 @@
+<resources>
+    <string name="app_name">MountainGuide</string>
+    <string name="logo_name">MountaIndo</string>
+    <string name="slogan_name">We will help you to find your way!</string>
+    <string name="powered_by">By Mustika Dewi K</string>
+
+    <!-- String for on Board -->
+    <string name="first_slide_title">Search Your Location</string>
+    <string name="second_slide_title">Make a Call</string>
+    <string name="third_slide_title">Add Missing Place</string>
+    <string name="fourth_slide_title">Sit Back and Enjoy</string>
+
+    <string name="first_slide_desc">This is the description part of this on Boarding place </string>
+    <string name="second_slide_desc">This is the description part of this on Boarding place </string>
+    <string name="third_slide_desc">This is the description part of this on Boarding place </string>
+    <string name="fourth_slide_desc">This is the description part of this on Boarding place </string>
+
+    <string name="skip_btn">Skip</string>
+    <string name="next_btn">Next</string>
+    <string name="let_get_started">Lets Get Started</string>
+
+    <!-- Strings for Dashboard -->
+    <string name="hotels">Hotels</string>
+    <string name="restaurants">Restaurants</string>
+    <string name="shops">Shops</string>
+    <string name="banks">Banks</string>
+    <string name="airports">Airports</string>
+
+    <string name="featured_locations">All Featured Locations</string>
+    <string name="featured_locations_description">All the locations that are featured and have the top demand in town !</string>
+    <string name="most_viewed_locations">Most Viewed</string>
+    <string name="categories">Categories</string>
+    <string name="view_all">View All</string>
+    <string name="search_text">Search.....</string>
+
+    <!-- Menu -->
+    <string name="home">home</string>
+    <string name="search">search</string>
+    <string name="all_categories">all categories</string>
+    <string name="find_nearby_place">find nearby</string>
+    <string name="profile">profile</string>
+    <string name="login">login</string>
+    <string name="logout">logout</string>
+    <string name="educations">educations</string>
+    <string name="shop">shops</string>
+    <string name="share">share</string>
+    <string name="rate_us">rate us</string>
+
+    <!-- All Categories Menu names -->
+    <string name="expand_all">Expand All</string>
+    <string name="car_rent">Car Rent</string>
+    <string name="all_shops">All Shops</string>
+
+    <!-- TODO: Retailer Panel Strings -->
+
+
+    <!-- general String -->
+    <string name="sign_up">Sign Up</string>
+    <string name="retailer_tag_line">Welcome to the MountaIndo</string>
+    <string name="create_account">Create <br />Account</string>
+    <string name="how_we_work">How we work?</string>
+    <string name="remember_me">Remember Me</string>
+    <string name="forget_password">Forget Password</string>
+
+    <!-- Login -->
+    <string name="enter_username"> Enter Username</string>
+    <string name="enter_password"> Enter Password</string>
+    <string name="enter_full_name"> Full Name</string>
+    <string name="enter_username_login"> Username</string>
+    <string name="enter_password_login"> Password</string>
+    <string name="enter_phone_number"> Phone Number</string>
+    <string name="enter_email"> Email</string>
+
+    <!-- OTP Screen -->
+    <string name="otp_code_text">Code</string>
+    <string name="otp_verification_text">Verification</string>
+    <string name="otp_description_text">Enter on time password sent on</string>
+    <string name="make_selection_detail">Select which contact detail should we use to reset your password?</string>
+
+
+    <string name="via_sms">Via sms:</string>
+
+    <string name="new_credentials">New Credentials</string>
+    <string name="new_credentials_detail">Your Identity has been verified! set your new password!</string>
+
+    <string name="password_updated">Password Updated</string>
+    <string name="password_updated_success_message">your password has been updated!</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_location">Map</string>
+</resources>
