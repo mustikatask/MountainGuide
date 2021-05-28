@@ -58,6 +58,7 @@ public class LocationActivity extends FragmentActivity implements OnMapReadyCall
                         LatLng latLng = new LatLng(document.getGeoPoint("geoPoint").getLatitude(), document.getGeoPoint("geoPoint").getLongitude());
                         if (geoPoint != null) {
                             mMap.addMarker(new MarkerOptions().position(new LatLng(geoPoint.getLatitude(), geoPoint.getLongitude())).title(id));
+
                         } else {
                             Log.w(TAG, "Error getting documents.", task.getException());
                         }
@@ -68,9 +69,11 @@ public class LocationActivity extends FragmentActivity implements OnMapReadyCall
                                 Intent i = new Intent(LocationActivity.this, DetailsMountain.class);
                                 i.putExtra("uid", id);
                                 startActivity(i);
+                                finish();
                                 return false;
                             }
                         });
+
                     }
                 }
             }

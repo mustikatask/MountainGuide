@@ -37,8 +37,8 @@ public class EquipmentAdapter extends RecyclerView.Adapter<EquipmentAdapter.myvi
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(holder.t1.getContext(), Details.class);
-                intent.putExtra("uname", dataList.get(position).getTitle());
-                intent.putExtra("ustatus", dataList.get(position).getSubtitle());
+                intent.putExtra("utitle", dataList.get(position).getTitle());
+                intent.putExtra("usubtitle", dataList.get(position).getSubtitle());
                 intent.putExtra("udesc", dataList.get(position).getDesc());
 
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);

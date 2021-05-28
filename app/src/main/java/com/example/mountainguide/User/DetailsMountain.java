@@ -56,13 +56,24 @@ public class DetailsMountain extends AppCompatActivity {
         t9 = bundle.getString("uterrain");
         t10 = bundle.getString("uimgurl");
         textId = bundle.getString("uid");
+
+        text1 = findViewById(R.id.nameholder);
+        text2 = findViewById(R.id.statusholder);
+        text3 = findViewById(R.id.heightholder);
+        text4 = findViewById(R.id.noteholder);
+        text5 = findViewById(R.id.descholder);
+        text6 = findViewById(R.id.locationholder);
+        text7 = findViewById(R.id.geometryholder);
+        text8 = findViewById(R.id.weatherholder);
+        text9 = findViewById(R.id.terrainholder);
+        img_detail=findViewById(R.id.img_detail);
         if (t1 != null) {
             getIntentMountain();
         } else if (t1 == null) {
             getIntentLocation();
         }
 
-        btn = (FloatingActionButton) findViewById(R.id.btnback);
+        btn =findViewById(R.id.btnback);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -71,7 +82,7 @@ public class DetailsMountain extends AppCompatActivity {
             }
         });
 
-        gotobc = (Button) findViewById(R.id.goto_bc);
+        gotobc =findViewById(R.id.goto_bc);
         gotobc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -84,16 +95,6 @@ public class DetailsMountain extends AppCompatActivity {
     }
 
     public void getIntentMountain() {
-        text1 = findViewById(R.id.nameholder);
-        text2 = findViewById(R.id.statusholder);
-        text3 = findViewById(R.id.heightholder);
-        text4 = findViewById(R.id.noteholder);
-        text5 = findViewById(R.id.descholder);
-        text6 = findViewById(R.id.locationholder);
-        text7 = findViewById(R.id.geometryholder);
-        text8 = findViewById(R.id.weatherholder);
-        text9 = findViewById(R.id.terrainholder);
-        img_detail = (ImageView) findViewById(R.id.img_detail);
 
         text1.setText(t1);
         text2.setText(t2);
@@ -118,8 +119,8 @@ public class DetailsMountain extends AppCompatActivity {
                 .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
                     @Override
                     public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
-                        for (DocumentSnapshot d : queryDocumentSnapshots.getDocuments()){
-                            if(d.exists()) {
+                        for (DocumentSnapshot d : queryDocumentSnapshots.getDocuments()) {
+                            if (d.exists()) {
                                 t1 = d.getString("name");
                                 t2 = d.getString("status");
                                 t3 = d.getString("height");
@@ -129,20 +130,32 @@ public class DetailsMountain extends AppCompatActivity {
                                 t7 = d.getString("geometry");
                                 t8 = d.getString("weather");
                                 t9 = d.getString("terrain");
-                                t10 = d.get("imgurl").toString();
+                                t10 = d.getString("imgurl");
                             }
                         }
+                        text1.setText(t1);
+                        text2.setText(t2);
+                        text3.setText(t3);
+                        text4.setText(t4);
+                        text5.setText(t5);
+                        text6.setText(t6);
+                        text7.setText(t7);
+                        text8.setText(t8);
+                        text9.setText(t9);
+                        Glide.with(DetailsMountain.this)
+                                .load(t10)
+                                .diskCacheStrategy(DiskCacheStrategy.RESOURCE)
+                                .centerCrop()
+                                .into(img_detail);
+
                     }
                 }).addOnFailureListener(new OnFailureListener() {
                     @Override
                     public void onFailure(@NonNull Exception e) {
                         Log.e("error", String.valueOf(e));
                     }
+
                 });
-        Glide.with(this)
-                .load(t10)
-                .diskCacheStrategy(DiskCacheStrategy.RESOURCE)
-                .centerCrop()
-                .into(img_detail);
+
     }
 }

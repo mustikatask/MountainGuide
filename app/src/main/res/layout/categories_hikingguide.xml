@@ -26,6 +26,17 @@
             android:padding="15dp"
             android:src="@drawable/general_search_icon" />
     </RelativeLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30dp"
+        android:text="Hiking Guide List"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:fontFamily="@font/muli"
+        android:shadowColor="@color/lightWhite"
+        android:shadowRadius="10"
+        android:textColor="#fff"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
