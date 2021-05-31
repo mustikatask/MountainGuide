@@ -2,11 +2,15 @@ package com.example.mountainguide.User.Model;
 
 public class BasecampModel {
     String id, id_gunung, name, addr, estimation_time, ticket, desc;
+    public Double latitude;
+    public Double longitude;
+//    int no_telp;
 
     public BasecampModel() {
     }
 
-    public BasecampModel(String id, String id_gunung, String name, String addr, String estimation_time, String ticket, String desc) {
+    public BasecampModel(String id, String id_gunung, String name, String addr, String estimation_time, String ticket, String desc,
+                         Double latitude, Double longitude) {
         this.id = id;
         this.id_gunung = id_gunung;
         this.name = name;
@@ -14,6 +18,33 @@ public class BasecampModel {
         this.estimation_time = estimation_time;
         this.ticket = ticket;
         this.desc = desc;
+        this.latitude = latitude;
+        this.longitude = longitude;
+//        this.no_telp = no_telp;
+    }
+
+//    public int getNo_telp() {
+//        return no_telp;
+//    }
+//
+//    public void setNo_telp(int no_telp) {
+//        this.no_telp = no_telp;
+//    }
+
+    public double getLatitude() {
+        return latitude;
+    }
+
+    public void setLatitude(Double latitude) {
+        this.latitude = latitude;
+    }
+
+    public double getLongitude() {
+        return longitude;
+    }
+
+    public void setLongitude(Double longitude) {
+        this.longitude = longitude;
     }
 
     public String getId() {

@@ -56,7 +56,6 @@ public class Login extends AppCompatActivity {
                 loginUser(txt_email, txt_password);
             }
         });
-
     }
 
     private void loginUser(String email, String password) {

@@ -115,7 +115,7 @@ public class DetailsMountain extends AppCompatActivity {
     public void getIntentLocation() {
         db = FirebaseFirestore.getInstance();
         final String id = textId;
-        Task<QuerySnapshot> mountain = db.collection("mountain").whereEqualTo("id", id).get()
+        Task<QuerySnapshot> mountain = db.collection("mountain").whereEqualTo("id", textId).get()
                 .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
                     @Override
                     public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
@@ -130,7 +130,7 @@ public class DetailsMountain extends AppCompatActivity {
                                 t7 = d.getString("geometry");
                                 t8 = d.getString("weather");
                                 t9 = d.getString("terrain");
-                                t10 = d.getString("imgurl");
+                                t10 = d.get("imgurl").toString();
                             }
                         }
                         text1.setText(t1);
@@ -152,7 +152,7 @@ public class DetailsMountain extends AppCompatActivity {
                 }).addOnFailureListener(new OnFailureListener() {
                     @Override
                     public void onFailure(@NonNull Exception e) {
-                        Log.e("error", String.valueOf(e));
+                        Log.e("Error", String.valueOf(e));
                     }
 
                 });

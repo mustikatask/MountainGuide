@@ -10,10 +10,8 @@
         android:id="@+id/background_image"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/splash_screen_background"
-        android:scaleType="fitCenter"
-        app:layout_editor_absoluteX="0dp"
-        app:layout_editor_absoluteY="0dp"/>
+        android:scaleType="centerCrop"
+        android:src="@drawable/bc"/>
 
     <TextView
         android:id="@+id/powered_by_line"
@@ -36,7 +34,10 @@
         android:text="MOUNTAINDO"
         android:textColor="#fff"
         android:gravity="center"
-        android:textStyle="bold|italic"
+        android:fontFamily="@font/muli"
+        android:textStyle="bold"
+        android:shadowColor="#000000"
+        android:shadowRadius="40"
         android:textSize="55sp"
         app:layout_constraintEnd_toEndOf="@+id/background_image"
         app:layout_constraintStart_toStartOf="@+id/background_image"/>
