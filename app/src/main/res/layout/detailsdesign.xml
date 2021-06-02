@@ -24,12 +24,12 @@
             app:layout_scrollFlags="scroll|snap|exitUntilCollapsed">
 
             <ImageView
-                android:id="@+id/img_detail"
+                android:id="@+id/banner"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
                 android:layout_gravity="center|end"
                 android:scaleType="centerCrop"
-                android:src="@drawable/carrier"
+                android:src="@drawable/bccategory"
                 app:layout_collapseMode="parallax" />
 
             <androidx.appcompat.widget.Toolbar
@@ -94,7 +94,7 @@
                 app:cardElevation="10dp">
 
                 <ImageView
-                    android:id="@+id/route_img"
+                    android:id="@+id/img_detail"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:elevation="15dp"

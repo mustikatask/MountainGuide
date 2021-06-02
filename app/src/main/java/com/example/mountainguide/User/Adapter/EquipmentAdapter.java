@@ -40,6 +40,7 @@ public class EquipmentAdapter extends RecyclerView.Adapter<EquipmentAdapter.myvi
                 intent.putExtra("utitle", dataList.get(position).getTitle());
                 intent.putExtra("usubtitle", dataList.get(position).getSubtitle());
                 intent.putExtra("udesc", dataList.get(position).getDesc());
+                intent.putExtra("uimgurl", dataList.get(position).getImgurl());
 
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 holder.t1.getContext().startActivity(intent);

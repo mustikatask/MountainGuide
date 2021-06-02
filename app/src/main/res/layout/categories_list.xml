@@ -24,14 +24,6 @@
                 android:layout_centerVertical="true"
                 android:padding="15dp"
                 android:src="@drawable/general_back_icon" />
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_centerVertical="true"
-                android:padding="15dp"
-                android:src="@drawable/general_search_icon" />
         </RelativeLayout>
 
         <TextView
@@ -58,7 +50,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/brandon_grotesque_black"
+                    android:fontFamily="@font/muli_black"
                     android:padding="10dp"
                     android:text="Hiking Guidance"
                     android:textColor="@color/white"
@@ -70,6 +62,7 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
                     android:background="#00000000"
+                    android:fontFamily="@font/muli"
                     android:padding="15dp"
                     android:text="Show list"
                     android:textAllCaps="false" />
@@ -178,7 +171,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/brandon_grotesque_black"
+                    android:fontFamily="@font/muli_black"
                     android:padding="10dp"
                     android:text="Hiking Equipment"
                     android:textColor="@color/white"
@@ -189,6 +182,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
+                    android:fontFamily="@font/muli"
                     android:background="#00000000"
                     android:padding="15dp"
                     android:text="Show List"
@@ -216,7 +210,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/brandon_grotesque_black"
+                    android:fontFamily="@font/muli_black"
                     android:padding="10dp"
                     android:text="First Aid"
                     android:textColor="@color/white"
@@ -227,6 +221,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
+                    android:fontFamily="@font/muli"
                     android:background="#00000000"
                     android:padding="15dp"
                     android:text="Show List"
@@ -255,7 +250,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/brandon_grotesque_black"
+                    android:fontFamily="@font/muli_black"
                     android:padding="10dp"
                     android:text="Tips n Trick"
                     android:textColor="@color/white"
@@ -266,6 +261,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
+                    android:fontFamily="@font/muli"
                     android:background="#00000000"
                     android:padding="15dp"
                     android:text="Show List"

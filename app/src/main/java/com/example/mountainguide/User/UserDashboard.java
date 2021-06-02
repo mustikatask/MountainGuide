@@ -4,11 +4,8 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
-import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -18,13 +15,10 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import com.example.mountainguide.R;
-import com.example.mountainguide.HelperClasses.HomeAdapter.*;
 import com.example.mountainguide.User.Location.*;
 import com.example.mountainguide.User.Categories.AllCategories;
 import com.example.mountainguide.User.Categories.*;
 import com.google.android.material.navigation.NavigationView;
-
-import java.util.ArrayList;
 
 import com.example.mountainguide.Common.LoginSignup.*;
 
@@ -34,10 +28,6 @@ public class UserDashboard extends AppCompatActivity implements NavigationView.O
     static final float END_SCALE = 0.7f;
     LinearLayout contentView;
 
-    RecyclerView featuredRecycler, mostViewedRecycler, categoriesRecycler;
-    RecyclerView.Adapter adapter;
-
-    private GradientDrawable gradient1, gradient2, gradient3, gradient4;
     ImageView menuIcon;
     //Drawer Menu
     DrawerLayout drawerLayout;
@@ -50,10 +40,6 @@ public class UserDashboard extends AppCompatActivity implements NavigationView.O
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_user_dashboard);
 
-        //Hooks
-//        featuredRecycler = findViewById(R.id.featured_recycler);
-//        mostViewedRecycler = findViewById(R.id.most_viewed_recycler);
-//        categoriesRecycler = findViewById(R.id.categories_recycler);
         menuIcon = findViewById(R.id.menu_icon);
         contentView = findViewById(R.id.content);
         hikingguide = findViewById(R.id.hikingguide);
@@ -67,10 +53,6 @@ public class UserDashboard extends AppCompatActivity implements NavigationView.O
 
         navigationDrawer();
 
-        //Recycler Views Function Calls
-//        featuredRecycler();
-//        mostViewedRecycler();
-//        categoriesRecycler();
         hikingguide.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -172,54 +154,6 @@ public class UserDashboard extends AppCompatActivity implements NavigationView.O
 
         return true;
     }
-
-
-    //Recycler View Functions
-//    private void featuredRecycler() {
-//        featuredRecycler.setHasFixedSize(true);
-//        featuredRecycler.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
-//
-//        ArrayList<FeaturedHelperClass> featuredLocations = new ArrayList<>();
-//        featuredLocations.add(new FeaturedHelperClass(R.drawable.merapi, "Merapi", "Merapi mountain"));
-//        featuredLocations.add(new FeaturedHelperClass(R.drawable.merbabu, "Merbabu", "Merbabu mountain"));
-//        featuredLocations.add(new FeaturedHelperClass(R.drawable.semeru, "Semeru", "Semeru mountain"));
-//
-//        adapter = new FeaturedAdapter(featuredLocations);
-//        featuredRecycler.setAdapter(adapter);
-//
-//        GradientDrawable gradient1 = new GradientDrawable(GradientDrawable.Orientation.LEFT_RIGHT, new int[]{0xffeff400, 0xffaff600});
-//    }
-
-//    private void mostViewedRecycler(){
-//        mostViewedRecycler.setHasFixedSize(true);
-//        mostViewedRecycler.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL,false));
-//
-//        ArrayList<FeaturedHelperClass> featuredLocations = new ArrayList<>();
-//        featuredLocations.add(new FeaturedHelperClass(R.drawable.mcdonald_img, "Mcdonald's", "hahaha hahah hahah hahah hahah hahah hahah hahah hahhah haha haha haha "));
-//        featuredLocations.add(new FeaturedHelperClass(R.drawable.city_1, "Edenrobe", "hahaha hahah hahah hahah hahah hahah hahah hahah hahhah haha haha haha "));
-//        featuredLocations.add(new FeaturedHelperClass(R.drawable.city_2, "Sweet and Bakers", "hahaha hahah hahah hahah hahah hahah hahah hahah hahhah haha haha haha "));
-//
-//        adapter = new FeaturedAdapter(featuredLocations);
-//        mostViewedRecycler.setAdapter(adapter);
-//
-//        GradientDrawable gradient2 = new GradientDrawable(GradientDrawable.Orientation.LEFT_RIGHT, new int[]{0xffeff400, 0xffaff600});
-//    }
-//
-//    private void categoriesRecycler(){
-//        categoriesRecycler.setHasFixedSize(true);
-//        categoriesRecycler.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL,false));
-//
-//        ArrayList<FeaturedHelperClass> featuredLocations = new ArrayList<>();
-//        featuredLocations.add(new FeaturedHelperClass(R.drawable.mcdonald_img, "Mcdonald's", "hahaha hahah hahah hahah hahah hahah hahah hahah hahhah haha haha haha "));
-//        featuredLocations.add(new FeaturedHelperClass(R.drawable.city_1, "Edenrobe", "hahaha hahah hahah hahah hahah hahah hahah hahah hahhah haha haha haha "));
-//        featuredLocations.add(new FeaturedHelperClass(R.drawable.city_2, "Sweet and Bakers", "hahaha hahah hahah hahah hahah hahah hahah hahah hahhah haha haha haha "));
-//
-//        adapter = new FeaturedAdapter(featuredLocations);
-//        categoriesRecycler.setAdapter(adapter);
-//
-//        GradientDrawable gradient3 = new GradientDrawable(GradientDrawable.Orientation.LEFT_RIGHT, new int[]{0xffeff400, 0xffaff600});
-//    }
-
 
     //Normal Functions
     public void callRetailerScreens(View view) {

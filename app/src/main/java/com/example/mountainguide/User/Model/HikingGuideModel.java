@@ -1,15 +1,24 @@
 package com.example.mountainguide.User.Model;
 
 public class HikingGuideModel {
-    String title, subtitle, desc;
+    String title, subtitle, desc, imgurl;
 
     public HikingGuideModel() {
     }
 
-    public HikingGuideModel(String title, String subtitle, String desc) {
+    public HikingGuideModel(String title, String subtitle, String desc, String imgurl) {
         this.title = title;
         this.subtitle = subtitle;
         this.desc = desc;
+        this.imgurl = imgurl;
+    }
+
+    public String getImgurl() {
+        return imgurl;
+    }
+
+    public void setImgurl(String imgurl) {
+        this.imgurl = imgurl;
     }
 
     public String getTitle() {

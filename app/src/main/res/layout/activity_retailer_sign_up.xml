@@ -74,7 +74,7 @@
                 app:endIconMode="clear_text"
                 app:endIconTint="@color/black"
                 app:hintTextColor="@color/black"
-                app:startIconDrawable="@drawable/field_email_icon"
+                app:startIconDrawable="@drawable/email"
                 app:startIconTint="@color/black">
 
                 <com.google.android.material.textfield.TextInputEditText

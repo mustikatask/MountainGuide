@@ -20,7 +20,6 @@ import java.util.ArrayList;
 
 public class MountainAdapter extends RecyclerView.Adapter<MountainAdapter.myviewholder>{
     ArrayList<MountainModel> dataList;
-    ImageView img_detail;
 
     public MountainAdapter(ArrayList<MountainModel> dataList) {
         this.dataList = dataList;
@@ -29,7 +28,7 @@ public class MountainAdapter extends RecyclerView.Adapter<MountainAdapter.myview
     @NonNull
     @Override
     public MountainAdapter.myviewholder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.rowdesign, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.rowdesignmountain, parent, false);
         return new MountainAdapter.myviewholder(view);
     }
 

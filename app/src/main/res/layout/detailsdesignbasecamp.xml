@@ -21,7 +21,7 @@
             app:layout_scrollFlags="scroll|snap|exitUntilCollapsed">
 
             <ImageView
-                android:id="@+id/img_detail"
+                android:id="@+id/banner"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="end"
@@ -205,7 +205,7 @@
                 app:cardElevation="10dp">
 
                 <ImageView
-                    android:id="@+id/route_img"
+                    android:id="@+id/img_detail"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:elevation="15dp"
@@ -232,7 +232,7 @@
         app:layout_anchorGravity="start" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/navigate"
+        android:id="@+id/gotomaps"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginRight="90dp"
@@ -244,6 +244,7 @@
         app:fabSize="normal"
         app:layout_anchor="@id/collapsing_toolbar"
         app:layout_anchorGravity="end|bottom" />
+
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/call"
         android:layout_width="wrap_content"

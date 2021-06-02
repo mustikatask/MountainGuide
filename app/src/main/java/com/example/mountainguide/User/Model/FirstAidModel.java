@@ -1,17 +1,22 @@
 package com.example.mountainguide.User.Model;
 
 public class FirstAidModel {
-    String title, subtitle, desc;
+    String title, subtitle, desc, imgurl;
 
     public FirstAidModel() {
     }
-
-    public FirstAidModel(String title, String subtitle, String desc) {
+    public FirstAidModel(String title, String subtitle, String desc, String imgurl) {
         this.title = title;
         this.subtitle = subtitle;
         this.desc = desc;
+        this.imgurl = imgurl;
     }
-
+    public String getImgurl() {
+        return imgurl;
+    }
+    public void setImgurl(String imgurl) {
+        this.imgurl = imgurl;
+    }
     public String getTitle() {
         return title;
     }

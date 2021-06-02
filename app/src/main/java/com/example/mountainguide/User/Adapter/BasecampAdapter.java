@@ -26,7 +26,7 @@ public class BasecampAdapter extends RecyclerView.Adapter<BasecampAdapter.myview
     @NonNull
     @Override
     public BasecampAdapter.myviewholder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.rowdesign, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.rowdesignbasecamp, parent, false);
         return new BasecampAdapter.myviewholder(view);
     }
 
@@ -44,7 +44,8 @@ public class BasecampAdapter extends RecyclerView.Adapter<BasecampAdapter.myview
                 intent.putExtra("uestimation", dataList.get(position).getEstimation_time());
                 intent.putExtra("uticket", dataList.get(position).getTicket());
                 intent.putExtra("udesc", dataList.get(position).getDesc());
-//                intent.putExtra("uno_telp", dataList.get(position).getNo_telp());
+                intent.putExtra("uno_telp", dataList.get(position).getNo_telp());
+                intent.putExtra("uimgurl", dataList.get(position).getImgurl());
 
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 holder.t1.getContext().startActivity(intent);

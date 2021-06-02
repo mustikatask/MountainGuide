@@ -1,7 +1,8 @@
-package com.example.mountainguide.User;
+package com.example.mountainguide.Common.LoginSignup;
 
 import androidx.appcompat.app.AppCompatActivity;
 import com.example.mountainguide.*;
+import com.example.mountainguide.User.UserDashboard;
 import com.google.firebase.auth.FirebaseAuth;
 
 import android.content.Intent;
@@ -11,8 +12,6 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import com.example.mountainguide.Common.LoginSignup.*;
 
 public class Profile extends AppCompatActivity {
 
