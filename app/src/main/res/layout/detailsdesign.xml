@@ -51,6 +51,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="80dp"
             android:orientation="vertical">
 
             <TextView
@@ -67,13 +68,13 @@
                 android:id="@+id/statusholder"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/lightWhite"
-                android:textSize="20dp"
+                android:textSize="25dp"
+                android:textColor="#000000"
                 android:textStyle="bold"
                 android:layout_marginTop="20dp"
-                android:layout_marginLeft="30dp"
+                android:layout_marginLeft="45dp"
                 android:layout_marginRight="30dp"
-                android:hint="Detail"/>
+                android:text="Detail"/>
             <TextView
                 android:id="@+id/descholder"
                 android:layout_width="wrap_content"
@@ -106,18 +107,18 @@
 
     </androidx.core.widget.NestedScrollView>
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/btnback"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginRight="30dp"
-        android:backgroundTint="#facf5a"
-        android:baselineAlignBottom="false"
-        android:clickable="true"
-        android:src="@drawable/general_back_icon"
-        app:fabSize="normal"
-        app:layout_anchor="@id/collapsing_toolbar"
-        app:layout_anchorGravity="end|bottom" />
+<!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--        android:id="@+id/btnback"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginRight="30dp"-->
+<!--        android:backgroundTint="#facf5a"-->
+<!--        android:baselineAlignBottom="false"-->
+<!--        android:clickable="true"-->
+<!--        android:src="@drawable/general_back_icon"-->
+<!--        app:fabSize="normal"-->
+<!--        app:layout_anchor="@id/collapsing_toolbar"-->
+<!--        app:layout_anchorGravity="end|bottom" />-->
 <!--    <TextView-->
 <!--        android:layout_width="match_parent"-->
 <!--        android:layout_height="wrap_content"-->
@@ -155,5 +156,18 @@
 <!--        android:textStyle="bold"-->
 <!--        android:textColor="#000"-->
 <!--        android:textSize="25sp"/>-->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnback"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:layout_margin="10dp"
+        android:backgroundTint="#ffffff"
+        android:baselineAlignBottom="false"
+        android:clickable="true"
+        android:src="@drawable/general_back_icon"
+        app:fabSize="mini"
+        app:layout_anchor="@id/collapsing_toolbar"
+        app:layout_anchorGravity="start" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

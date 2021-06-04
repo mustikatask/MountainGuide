@@ -9,22 +9,25 @@
     <ImageView
         android:id="@+id/slider_image"
         android:layout_width="0dp"
-        android:layout_height="250dp"
+        android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.012"
-        app:srcCompat="@drawable/sit_back_and_relax" />
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/locationslider"/>
 
     <TextView
         android:id="@+id/slider_heading"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:fontFamily="@font/brandon_grotesque_black"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="290dp"
+        android:fontFamily="@font/muli_black"
         android:gravity="center"
         android:text="TextView"
+        android:shadowColor="#ffffff"
+        android:textStyle="bold"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -32,9 +35,11 @@
 
     <TextView
         android:id="@+id/slider_desc"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:gravity="center"
+        android:layout_marginTop="370dp"
+        android:textSize="20sp"
         android:text="@string/first_slide_desc"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

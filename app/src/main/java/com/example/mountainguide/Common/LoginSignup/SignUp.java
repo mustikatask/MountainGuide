@@ -12,65 +12,121 @@ import com.google.firebase.auth.FirebaseAuth;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.TextUtils;
+import android.telephony.ims.RegistrationManager;
+import android.util.Patterns;
 import android.view.View;
 
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.mountainguide.User.*;
+import com.google.firebase.database.FirebaseDatabase;
 
-public class SignUp extends AppCompatActivity {
+public class SignUp extends AppCompatActivity implements View.OnClickListener{
 
-    private TextInputEditText email;
-    private TextInputEditText password;
-    private Button register;
-
-    private FirebaseAuth auth;
+    private TextView banner;
+    private Button registerUser;
+    private FirebaseAuth mAuth;
+    private TextInputEditText editTextUsername, editTextEmail, editTextPassword;
+    private ProgressBar progressBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
+//        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_retailer_sign_up);
 
-        email = findViewById(R.id.email);
-        password = findViewById(R.id.password);
-        register = findViewById(R.id.register);
+        mAuth = FirebaseAuth.getInstance();
+        banner = findViewById(R.id.signup_title_text);
+        banner.setOnClickListener(this);
 
-        auth = FirebaseAuth.getInstance();
+        registerUser = findViewById(R.id.registerButton);
+        registerUser.setOnClickListener(this);
 
-        register.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String txt_email = email.getText().toString();
-                String txt_password = password.getText().toString();
+        editTextUsername = findViewById(R.id.uname);
+        editTextEmail = findViewById(R.id.email);
+        editTextPassword = findViewById(R.id.password);
 
-                if (TextUtils.isEmpty(txt_email) || TextUtils.isEmpty(txt_password)) {
-                    Toast.makeText(SignUp.this, "Empty credentials", Toast.LENGTH_SHORT).show();
-                } else if (txt_password.length() < 6) {
-                    Toast.makeText(SignUp.this, "Password to short!", Toast.LENGTH_SHORT).show();
-                } else {
-                    registerUser(txt_email, txt_password);
-                }
-            }
-        });
+        progressBar = findViewById(R.id.progressBar);
 
     }
-    private void registerUser(String email, String password) {
-        auth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(SignUp.this, new OnCompleteListener<AuthResult>() {
-            @Override
-            public void onComplete(@NonNull Task<AuthResult> task) {
-                if (task.isSuccessful()) {
-                    Toast.makeText(SignUp.this, "Registering User Succesfull", Toast.LENGTH_SHORT).show();
-                    startActivity(new Intent(SignUp.this, UserDashboard.class));
-                    finish();
-                } else {
-                    Toast.makeText(SignUp.this, "Registration failed", Toast.LENGTH_SHORT).show();
-                }
-            }
-        });
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.banner:
+                startActivity(new Intent(this, Login.class));
+                break;
+            case R.id.registerButton:
+                registerUser();
+                break;
+        }
     }
 
+    private void registerUser(){
+        String email = editTextEmail.getText().toString().trim();
+        String password = editTextPassword.getText().toString().trim();
+        String username = editTextUsername.getText().toString().trim();
+
+        if (username.isEmpty()){
+            editTextUsername.setError("Username is required!");
+            editTextUsername.requestFocus();
+            return;
+        }
+        if (email.isEmpty()){
+            editTextEmail.setError("Email is required!");
+            editTextEmail.requestFocus();
+            return;
+        }
+        if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
+            editTextEmail.setError("Please provide valid email!");
+            editTextEmail.requestFocus();
+            return;
+        }
+        if (password.isEmpty()){
+            editTextPassword.setError("Password is required!");
+            editTextPassword.requestFocus();
+            return;
+        }
+        if (password.length() < 6){
+            editTextPassword.setError("Min password length should be 6 character!");
+            editTextPassword.requestFocus();
+            return;
+        }
+
+        progressBar.setVisibility(View.VISIBLE);
+        mAuth.createUserWithEmailAndPassword(email, password)
+                .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if (task.isSuccessful()){
+                            User user = new User(username, email);
+
+                            FirebaseDatabase.getInstance().getReference("User")
+                                    .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
+                                    .setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                @Override
+                                public void onComplete(@NonNull Task<Void> task) {
+                                    if (task.isSuccessful()){
+                                        Toast.makeText(SignUp.this,"User has been registered succesfully!", Toast.LENGTH_LONG).show();
+                                        progressBar.setVisibility(View.GONE);
+
+                                        //redirect to Login Layout
+                                    }else {
+                                        Toast.makeText(SignUp.this, "Failed to register! Try Again!", Toast.LENGTH_LONG).show();
+                                        progressBar.setVisibility(View.GONE);
+                                    }
+                                }
+                            });
+                        }else{
+                            Toast.makeText(SignUp.this, "Failed to register! Try Again!", Toast.LENGTH_LONG).show();
+                            progressBar.setVisibility(View.GONE);
+                        }
+                    }
+                });
+    }
 }

@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
 import com.example.mountainguide.User.Model.BasecampModel;
 
 import com.example.mountainguide.R;
@@ -19,7 +20,7 @@ import java.util.ArrayList;
 public class BasecampAdapter extends RecyclerView.Adapter<BasecampAdapter.myviewholder> {
     ArrayList<BasecampModel> dataList;
 
-    public BasecampAdapter(ArrayList<BasecampModel> dataList){
+    public BasecampAdapter(ArrayList<BasecampModel> dataList) {
         this.dataList = dataList;
     }
 
@@ -57,15 +58,14 @@ public class BasecampAdapter extends RecyclerView.Adapter<BasecampAdapter.myview
     public int getItemCount() {
         return dataList.size();
     }
+
     class myviewholder extends RecyclerView.ViewHolder {
         TextView t1, t2;
-//        ImageView img;
 
         public myviewholder(@NonNull View itemView) {
             super(itemView);
             t1 = itemView.findViewById(R.id.t1);
             t2 = itemView.findViewById(R.id.t2);
-//            img = itemView.findViewById(R.id.img_detail);
         }
     }
 }

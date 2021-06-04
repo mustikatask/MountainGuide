@@ -77,7 +77,7 @@ public class DetailsMountain extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), Mountain.class));
+                onBackPressed();
                 finish();
             }
         });

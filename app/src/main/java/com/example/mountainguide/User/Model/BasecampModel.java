@@ -4,7 +4,8 @@ public class BasecampModel {
     String id, id_gunung, name, addr, estimation_time, ticket, desc;
     public Double latitude;
     public Double longitude;
-    String  no_telp, imgurl;
+    String  no_telp;
+    String imgurl;
 
     public BasecampModel() {
     }

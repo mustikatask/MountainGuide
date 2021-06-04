@@ -157,7 +157,7 @@ public class UserDashboard extends AppCompatActivity implements NavigationView.O
 
     //Normal Functions
     public void callRetailerScreens(View view) {
-        startActivity(new Intent(getApplicationContext(), RetailerStartUpScreen.class));
+        startActivity(new Intent(getApplicationContext(), Login.class));
     }
 
 

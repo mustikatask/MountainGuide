@@ -46,8 +46,9 @@ public class BasecampDetail extends AppCompatActivity {
         text3 = findViewById(R.id.ticketholder);
         text4 = findViewById(R.id.estimationholder);
         text5 = findViewById(R.id.descholder);
+        btn = findViewById(R.id.btnback);
         btncall = findViewById(R.id.call);
-        img_detail=findViewById(R.id.img_detail);
+        img_detail = findViewById(R.id.img_detail);
 
         text1.setText(t1);
         text2.setText(t2);
@@ -59,7 +60,6 @@ public class BasecampDetail extends AppCompatActivity {
                 .diskCacheStrategy(DiskCacheStrategy.RESOURCE)
                 .into(img_detail);
 
-        btn = findViewById(R.id.btnback);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

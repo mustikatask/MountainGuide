@@ -12,8 +12,6 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewpager.widget.PagerAdapter;
 import com.example.mountainguide.R;
 
-import org.w3c.dom.Text;
-
 public class SliderAdapter extends PagerAdapter {
 
     Context context;
@@ -28,7 +26,7 @@ public class SliderAdapter extends PagerAdapter {
             R.drawable.search_place,
             R.drawable.make_a_call,
             R.drawable.add_missing_place,
-            R.drawable.sit_back_and_relax,
+            R.drawable.locationslider,
 
     };
     int headings[]={
